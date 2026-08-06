@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    
+    // Read the five-digit integer
+    if (scanf("%d", &n) != 1) {
+        return 1;
+    }
+    
+    int sum = 0;
+    
+    // Extract each digit using a loop
+    while (n > 0) {
+        sum += n % 10; // Get the last digit and add it to sum
+        n /= 10;       // Truncate the last digit
+    }
+    
+    // Print the final sum of the digits
+    printf("%d\n", sum);
+    
+    return 0;
+}
